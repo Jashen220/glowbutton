@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+        font-family: sans-serif;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 4px;
+        min-height: 100vh;
+        background-color: black;
+    }
+    a{
+        position: relative;
+        display:inline-block;
+        text-transform: uppercase;
+        margin-right: 70px;
+        padding:25px 30px;
+        color:cyan;
+        font-size:1.2rem;
+        transition: 0.5s;
+        overflow: hidden;
+        
+    }
+    a:hover{
+        background-color: cyan;
+        color:rgb(37, 36, 36);
+        box-shadow: 0 0 5px cyan, 
+                    0 0 25px cyan,
+                    0 0 50px cyan,
+                    0 0 300px cyan;
+        -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(2, 2, 2, 0.333));
+    }
+    span{
+    position: absolute;
+    display: block;
+    }
+    span:nth-child(1){
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg,transparent,#03e9f4);
+        animation: animate1 1s infinite;
+    }
+    @keyframes animate1{
+        0%{
+            left:-100%;
+        }
+        100%{
+            left: 100%;
+        }
+    }
+    span:nth-child(2){
+        top:-100%;
+        right: 0;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(180deg,transparent,#03e9f4);
+        animation: animate2 1s infinite;
+        animation-delay: 0.25s;
+    }
+    @keyframes animate2{
+        0%{
+            top:-100%;
+        }
+        100%{
+            top: 100%;
+        }
+    }
+    span:nth-child(3){
+        bottom:0;
+        right: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(270deg,transparent,#03e9f4);
+        animation: animate3 1s infinite;
+        animation-delay: 0.5s;
+    }
+    @keyframes animate3{
+        0%{
+            right:-100%;
+        }
+        100%{
+            right: 100%;
+        }
+    }
+    span:nth-child(4){
+        bottom:-100%;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(360deg,transparent,#03e9f4);
+        animation: animate4 1s infinite;
+        animation-delay: 0.75s;
+    }
+    @keyframes animate4{
+        0%{
+            bottom:-100%;
+        }
+        100%{
+            bottom: 100%;
+        }
+    }
+</style>
+<body>
+    <div class="wrapper">
+    <a href="">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Button
+    </a>
+    <a href="">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Button 
+    </a>
+    <a href="">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Button
+    </a>
+    </div>
+</body>
+</html>
